@@ -1,0 +1,34 @@
+﻿@model List<ABISoft.Consume.Mvc.Models.ProductResponseModel>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <a asp-controller="Home" asp-action="Create">Create New Product</a>
+    <br />
+    <a asp-controller="Home" asp-action="Upload">Upload</a>
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Stock</th>
+            <th>Operations</th>
+        </tr>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Stock</td>
+                <td>
+                    <a asp-controller="Home" asp-action="Update" asp-route-id="@product.Id">Update</a>
+                    <a asp-controller="Home" asp-action="Remove" asp-route-id="@product.Id">Remove</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

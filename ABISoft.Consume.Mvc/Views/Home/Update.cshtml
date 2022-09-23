@@ -1,0 +1,31 @@
+﻿@model ProductUpdateModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Update Product</title>
+</head>
+<body>
+    <p>@TempData["errorMessage"]</p>
+    <h3>Update Product</h3>
+    <form asp-controller="Home" asp-action="Update" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <label>Product Name</label>
+        <input asp-for="Name" />
+        <br />
+
+        <label>Product Price</label>
+        <input asp-for="Price" />
+        <br />
+
+        <label>Product Stock</label>
+        <input asp-for="Stock" />
+        <br />
+
+        <div>
+            <a asp-controller="Home" asp-action="Index">Return Home</a>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</body>
+</html>

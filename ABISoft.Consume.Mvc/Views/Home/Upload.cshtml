@@ -1,0 +1,19 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add a New File</title>
+</head>
+<body>
+    <h3>Add a new file</h3>
+    <form asp-controller="Home" asp-action="Upload" method="post" enctype="multipart/form-data">
+        <label>Select a file</label>
+        <input type="file"  name="file"/>
+        <br />
+
+        <div>
+            <a asp-controller="Home" asp-action="Index">Return Home</a>
+            <button type="submit">Add File</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@model ProductAddModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add New Product</title>
+</head>
+<body>
+    <p>@TempData["errorMessage"]</p>
+    <h3>Add Product</h3>
+    <form asp-controller="Home" asp-action="Create" method="post">
+        <label>Product Name</label>
+        <input asp-for="Name" />
+        <br />
+
+        <label>Product Price</label>
+        <input asp-for="Price" />
+        <br />
+
+        <label>Product Stock</label>
+        <input asp-for="Stock" />
+        <br />
+
+        <div>
+            <a asp-controller="Home" asp-action="Index">Return Home</a>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</body>
+</html>
